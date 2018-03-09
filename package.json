@@ -1,0 +1,32 @@
+{
+  "name": "firefox-sourcemaps-example",
+  "version": "1.0.0",
+  "description": "Source maps don't seem to work in Firefox for me",
+  "repository": "https://github.com:aspin/firefox-sourcemaps-example",
+  "author": "Kevin Chen <kevinjchen94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.17.1",
+    "path": "^0.12.7",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "listen": "nodemon --watch webpack.config.js --exec webpack-dev-server"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  }
+}
